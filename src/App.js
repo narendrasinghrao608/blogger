@@ -1,23 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
-
+import Content from './component/Content';
+import Footer from './component/Footer';
+import Navbar from './component/Navbar';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import './css/Utils.css'
+import './css/App.css'
+import './css/contact.css'
+import './css/blogpost.css'
+import './css/responsive.css'
+import Contact from './component/Contact';
+import Blogpost from './component/Blogpost';
+import Search from './component/Search';
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+       <Router>
+       <Navbar/>
+      <Routes>
+          <Route exact path="/"  element={<Content topic='Featured article'/>}/>
+          <Route exact path="/about" element= ""/>
+          <Route exact path="/contact" element={<Contact/>}/>
+          <Route exact path="/blogpost" element={<Blogpost/>}/>
+          <Route exact path="/search" element={<Search/>}/>
+      </Routes>
+      <Footer/>
+    </Router>
     </div>
   );
 }

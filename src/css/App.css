@@ -1,0 +1,130 @@
+:root{
+    --main-bg-color:brown;
+    --font1:'Baloo 2', cursive;
+    --font2:'Roboto', sans-serif;
+    --font3:'Ubuntu', sans-serif;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+.navigation{
+    /* height: 74px; */
+    font-family: var(--font1);
+    /* background-color: red; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 25px;
+}
+.nav-left{
+    font-size: 25px;
+    display: flex;
+
+
+}
+.nav-left ul li{
+    list-style: none;
+    margin:0 14px;
+    font-family: var(--font2);
+    transition: all 0.3s ease-in-out;
+}
+.nav-left ul li a{
+    text-decoration: none;
+    color: black;
+}
+.nav-left a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+.nav-left ul li a:hover{
+    color: var(--main-bg-color);
+    font-weight: bolder;
+}
+.nav-left ul{
+    display: flex;
+    align-items: center;
+    margin: 0 77px;
+    font-size: 16px;
+    color: black;
+    font-weight: bold;
+}
+.content{
+    height: 100%;
+    /* background-color: rgb(245, 245, 248); */
+    display: flex;
+    margin-top:32px ;
+    padding: 9px;
+    position: relative;
+    border-radius: 12px;
+}
+.content::after{
+    content:"" ;
+    background-image: url('../img/bg0.jpg');
+    position: absolute;
+    width: 100%;
+    height: inherit;
+    opacity: 0.15;
+}
+.content-left{
+    font-family: var(--font1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 50px;
+    z-index: 1;
+}
+.content-right{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.content-right img{
+    height: 250px;
+    border: 1px solid black;
+    border-radius: 37px;
+}
+.home-articles{
+    padding: 18px;
+    background-color: rgb(248,239,239,0.5);
+    margin-top: 23px;
+    border-radius: 12px;
+    position: relative;
+}
+.year-box{
+    position: absolute;
+    width: 235px;
+    height:255px ;
+    /* background-color: red; */
+    top: 100px;
+    right: 225px;
+}
+.year-box div{
+    margin: 12px 0px;
+    font-size: 18px;
+}
+.home-article{
+    display: flex;
+    margin:25px;
+}
+.home-article img{
+    width: 300px;
+    height: 35vh;
+}
+.home-article-content{
+    align-self: center;
+    padding: 25px;
+}
+.home-article-content a{
+    text-decoration: none;
+    color: black;
+}
+.footer{
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    background-color:var(--main-bg-color);
+}
